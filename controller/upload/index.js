@@ -1,5 +1,4 @@
 const qiniu = require('qiniu')
-const fs = require('fs')
 const glob = require('glob')
 const path = require('path')
 const uploadConfig = require('../../config/upload-config')
@@ -26,7 +25,7 @@ const uploadFile = (uploadToken, key, localFile, putExtra) => {
       if (respErr) {
         reject(respErr)
       }
-      if (respInfo.statusCode == 200) {
+      if (respInfo.statusCode === 200) {
         resolve(respBody)
       } else {
         reject(respBody)
@@ -43,9 +42,8 @@ const readFilesPath = path => {
   })
 }
 const postImage = async (ctx, next) => {
-  let filesUploadFuncArr
   const filesPath = await readFilesPath(storePhotoDirPath)
-  filesUploadFuncArr = filesPath.map(filePath => {
+  const filesUploadFuncArr = filesPath.map(filePath => {
     const filename = path.basename(filePath)
     putExtra.fname = filename
     putExtra.resumeRecordFile = `./progress-${filename}.log`
@@ -54,7 +52,7 @@ const postImage = async (ctx, next) => {
   const result = await Promise.all(filesUploadFuncArr)
   ctx.body = { result }
 }
-const callback = async (ctx, next) => {
+const callback = async ctx => {
   ctx.throw(500, '服务器错误')
 }
 module.exports = {

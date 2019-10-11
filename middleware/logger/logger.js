@@ -31,7 +31,7 @@ module.exports = options => {
       type: 'stdout'
     }
   }
-  let config = {
+  const config = {
     appenders,
     categories: {
       default: {
@@ -54,7 +54,7 @@ module.exports = options => {
       host,
       serverIp,
       projectName,
-      referer: headers['referer'],
+      referer: headers.referer,
       userAgent: headers['user-agent']
     }
 
