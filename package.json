@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "export NODE_ENV='dev' && nodemon ./bin/www",
     "prelint": "npm link",
-    "lint": "eslint-run-lint"
+    "lint": "eslint-run-lint",
+    "init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
+    "init-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,12 @@
   },
   "homepage": "https://github.com/Jazk-Z/mini-project-server#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.25",
+    "cz-conventional-changelog": "^3.0.2",
     "debug": "^4.1.1",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
@@ -48,7 +57,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -60,5 +71,10 @@
   },
   "bin": {
     "eslint-run-lint": "bin/lint.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
