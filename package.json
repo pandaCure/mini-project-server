@@ -1,6 +1,6 @@
 {
   "name": "mini-project-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "暂定微信小程序后端",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint-run-lint",
     "init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
     "init-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "release": "standard-version -- --no-verify"
+    "release": "standard-version -- --no-verify --infile CHANGELOG.md"
   },
   "repository": {
     "type": "git",
