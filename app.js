@@ -5,6 +5,7 @@ const package = require('./package.json')
 const app = new Koa()
 const router = require('./router/index')
 const logger = require('./middleware/logger/logger.js')
+const handleError = require('./middleware/handleError/handleError')
 app.use(cors())
 app.use(
   logger({
@@ -15,5 +16,6 @@ app.use(
     serverIp: ip.address()
   })
 )
+app.use(handleError)
 router(app)
 module.exports = app
