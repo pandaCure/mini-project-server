@@ -61,4 +61,5 @@ typings/
 .next
 storePhotosDir/*
 .DS_Store
+logs/*
 
