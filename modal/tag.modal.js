@@ -1,7 +1,5 @@
 const Sequelize = require('sequelize')
 const { sequelize } = require('../config/sequelize')
-const Picture = require('./picture.modal')
-const PictureTag = require('./picture-tag.modal')
 const { Model } = Sequelize
 class Tag extends Model {}
 Tag.init(
@@ -38,6 +36,6 @@ Tag.init(
     freezeTableName: true
   }
 )
-Tag.belongsToMany(Picture, { through: PictureTag })
 Tag.sync()
-module.exports = Tag
+// https://github.com/sequelize/sequelize/issues/10395
+// https://cnodejs.org/topic/5b18e0678a4f51e140d94619

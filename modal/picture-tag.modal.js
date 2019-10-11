@@ -38,4 +38,3 @@ PictureTag.init(
   }
 )
 PictureTag.sync()
-module.exports = PictureTag
