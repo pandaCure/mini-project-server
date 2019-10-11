@@ -61,4 +61,4 @@ typings/
 .next
 storePhotosDir/*
 .DS_Store
-
+record-sql.sql
