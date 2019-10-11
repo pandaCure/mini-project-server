@@ -10,8 +10,8 @@
     "lint": "eslint-run-lint",
     "init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
     "init-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "release": "standard-version -- --no-verify --infile CHANGELOG.md",
-    "commit": "git-cz"
+    "release": "standard-version",
+    "commit": "git add . && git-cz"
   },
   "repository": {
     "type": "git",
