@@ -25,6 +25,7 @@
     "koa-router": "^7.4.0"
   },
   "dependencies": {
+    "log4js": "^5.2.1",
     "qiniu": "^7.2.2"
   }
 }
