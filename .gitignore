@@ -61,4 +61,9 @@ typings/
 .next
 storePhotosDir/*
 .DS_Store
+<<<<<<< HEAD
 record-sql.sql
+=======
+logs/*
+
+>>>>>>> 49128ee621e6074eb526a238ddc32ef87cd36e2a
