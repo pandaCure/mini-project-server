@@ -8,7 +8,7 @@
     "start": "export NODE_ENV='dev' && nodemon ./bin/www",
     "prelint": "npm link",
     "lint": "eslint-run-lint",
-    "init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
+    "init": "commitizen init cz-conventional-changelog --save-dev --save-exact --force",
     "init-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "release": "standard-version",
     "commit": "git add . && git-cz"
