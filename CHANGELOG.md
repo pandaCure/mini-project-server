@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Jazk-Z/mini-project-server/compare/v1.1.0...v1.2.0) (2019-10-12)
+
+
+### Features
+
+* add sequelizeconfig ([f7d78ee](https://github.com/Jazk-Z/mini-project-server/commit/f7d78ee27c15b16fb85e7de39337957e993e9d58))
+* database config ([a86d2ef](https://github.com/Jazk-Z/mini-project-server/commit/a86d2ef659d5b75e740a65ea0feb7298366ae464))
+
+
+### Bug Fixes
+
+* simpot create modal ([0e4eaf7](https://github.com/Jazk-Z/mini-project-server/commit/0e4eaf7bbb25679487c811091f7b35c47b5a45ff))
+
 ## 1.1.0 (2019-10-11)
 
 
