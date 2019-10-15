@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "export NODE_ENV='dev' && nodemon ./bin/www",
+    "start": "export NODE_ENV='development' && nodemon ./bin/www",
     "prelint": "npm link",
     "lint": "eslint-run-lint",
     "init": "commitizen init cz-conventional-changelog --save-dev --save-exact",

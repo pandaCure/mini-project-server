@@ -41,6 +41,11 @@ module.exports = (sequelize, DataTypes) => {
       description: {
         type: DataTypes.TEXT,
         comment: '照片描述'
+      },
+      publish: {
+        type: DataTypes.ENUM('published', 'unpublished'),
+        allowNull: false,
+        comment: '是否允许照片发布到小程序中'
       }
     },
     {
