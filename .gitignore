@@ -63,3 +63,4 @@ storePhotosDir/*
 .DS_Store
 record-sql.sql
 logs/*
+coverage

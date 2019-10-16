@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'picture',
+      modelName: 'Picture',
       timestamps: true,
       underscored: true,
       freezeTableName: true
