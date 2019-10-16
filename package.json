@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "export NODE_ENV='development' && nodemon ./bin/www",
+    "start": "export NODE_ENV='development' && node ./bin/www",
     "prelint": "npm link",
     "lint": "eslint-run-lint",
     "init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
@@ -52,6 +52,7 @@
     "@koa/multer": "^2.0.0",
     "glob": "^7.1.4",
     "ip": "^1.1.5",
+    "koa-bodyparser": "^4.2.1",
     "koa2-cors": "^2.0.6",
     "log4js": "^5.2.1",
     "multer": "^1.4.2",
