@@ -49,9 +49,9 @@
     "standard-version": "^7.0.0"
   },
   "dependencies": {
-    "@koa/multer": "^2.0.0",
     "glob": "^7.1.4",
     "ip": "^1.1.5",
+    "koa-body": "^4.1.1",
     "koa-bodyparser": "^4.2.1",
     "koa2-cors": "^2.0.6",
     "log4js": "^5.2.1",

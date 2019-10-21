@@ -8,6 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.UUIDV4,
         comment: '照片ID'
       },
+      url: {
+        type: DataTypes.STRING(350),
+        allowNull: false,
+        comment: '照片地址'
+      },
       name: {
         type: DataTypes.STRING(20),
         allowNull: false,
@@ -23,17 +28,32 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         comment: '拍摄照片所属省'
       },
+      province_code: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        comment: '拍摄照片所属省code'
+      },
       city: {
         type: DataTypes.STRING(20),
         allowNull: false,
         comment: '拍摄照片所属市'
+      },
+      city_code: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        comment: '拍摄照片所属市code'
       },
       region: {
         type: DataTypes.STRING(20),
         allowNull: false,
         comment: '拍摄照片所属区'
       },
-      location: {
+      region_code: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        comment: '拍摄照片所属区code'
+      },
+      detail_address: {
         type: DataTypes.STRING(100),
         allowNull: false,
         comment: '拍摄照片所属地区'

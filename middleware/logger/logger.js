@@ -18,7 +18,7 @@ module.exports = options => {
 
   // 需要的变量解构 方便使用
   const { env, appLogLevel, dir, serverIp, projectName } = opts
-  appenders.cheese = {
+  appenders.logger = {
     type: 'dateFile',
     filename: `${dir}/task`,
     pattern: '-yyyy-MM-dd.log',
