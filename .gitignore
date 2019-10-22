@@ -64,3 +64,4 @@ storePhotosDir/*
 record-sql.sql
 logs/*
 coverage
+.idea

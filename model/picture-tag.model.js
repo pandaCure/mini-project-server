@@ -7,6 +7,16 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         primaryKey: true,
         comment: '照片-标签关联ID'
+      },
+      picture_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        comment: '照片-标签关联ID'
+      },
+      tag_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        comment: '照片-标签关联ID'
       }
     },
     {
