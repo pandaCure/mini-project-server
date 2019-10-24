@@ -56,9 +56,10 @@ const postImage = async (ctx, next) => {
   if (!picture) ctx.throw(400, '参数错误 ----> formData')
   const tags = JSON.parse(picture.tags)
   delete picture.tags
+  const url = pictureUrl + result[0].key
   const params = {
     ...picture,
-    url: pictureUrl + result[0].key
+    url
   }
   let transaction
   try {
@@ -86,7 +87,7 @@ const postImage = async (ctx, next) => {
     if (transaction) await transaction.rollback()
   }
 
-  ctx.body = { result }
+  ctx.body = { url }
 }
 const callback = async ctx => {
   ctx.throw(500, '服务器错误')
