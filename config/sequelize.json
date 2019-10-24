@@ -18,8 +18,7 @@
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "dialect": "mysql"
   },
   "production": {
     "username": "root",
@@ -27,7 +26,6 @@
     "database": "travel",
     "host": "139.199.133.160",
     "dialect": "mysql",
-    "operatorsAliases": false,
     "pool": {
       "max": 5,
       "min": 0,
