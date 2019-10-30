@@ -1,5 +1,6 @@
 const glob = require('glob')
 const path = require('path')
+const rimraf = require('rimraf')
 const { Picture, PictureTag, Tag, sequelize } = require('../../model')
 const uploadConfig = require('../../config/upload-config')
 const storePhotoDirPath = path.resolve(process.cwd(), 'storePhotosDir/*.*')
@@ -57,7 +58,7 @@ const postImage = async (ctx, next) => {
     console.log(e)
     if (transaction) await transaction.rollback()
   }
-
+  rimraf.sync(storePhotoDirPath)
   ctx.body = { url }
 }
 const callback = async ctx => {
